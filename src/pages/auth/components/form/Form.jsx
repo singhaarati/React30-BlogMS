@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { Link } from 'react-router-dom'
 
 const htmlForm = ({ type, onSubmit }) => {
     const [data, setData] = useState({
@@ -61,6 +62,13 @@ const htmlForm = ({ type, onSubmit }) => {
                                     </div>
                                 </div>
                             </div>
+                            {
+                                type === 'Register' ? (
+                                    <Link to='/login' style={{ color: 'blue' }}> Go to login</Link>
+                                ) : (
+                                    <Link to='/register' style={{ color: 'blue' }} > Go to register</Link>
+                                )
+                            }
                         </form>
                     </div>
                 </div>
